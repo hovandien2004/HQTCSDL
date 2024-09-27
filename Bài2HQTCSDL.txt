@@ -1,0 +1,28 @@
+Bài 2: THỦ TỤC (Stored procedure)
+1. Giới thiệu
+2. Tạo/Sửa thủ tục không có tham số trả về:
+*Cú pháp:
+	create/alter  procedure <Tênthủtục>
+	[ds các tham số trả về]
+	As
+	[begin]
+		<Các câu lệnh>
+	[End]
+*Lời gọi:
+	<Tênthủtục> [<danh sách các giá trị tương ứng>]
+
+3.Tạo/Sửa thủ tục có tham số trả về
+*create/alter procedure <Tênthủtục>
+[Các tham số khong trả về    Output]
+as
+[begin]
+	<Các câu lệnh>
+[end]
+*Lời gọi:
+declare @biến <kiểu dữ liệu>
+execute <tênthủtục>[|_| <ds các giá trị tương ứng với tham số không trả về, @biến output,...>]
+
+select @biến
+
+4. Xóa thủ tục
+Drop procedure <Tên thủ tục>
